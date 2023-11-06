@@ -6,7 +6,7 @@ def esMayorEdad (edad):
     if(edad>=18):
         return True
     else :
-        return false
+        return False
 
 # Programa principal
 def main():
