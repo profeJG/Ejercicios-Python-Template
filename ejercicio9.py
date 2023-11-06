@@ -2,16 +2,16 @@
 __Author__="José Gaspar Sánchez García"
 
 def suma(x,y) :
-    return x
+    return x+y
 
 def resta(x,y) :
-    return x
+    return x-y
 
 def multiplica(x,y) :
-    return x
+    return x*y
 
 def divide(x,y) :
-    return y
+    return x/y
 
 # Función que crea el menú de la aplicacion.
 
@@ -36,7 +36,14 @@ def menuApp() :
             minuendo=int(input("Introduzca el minuendo: "))
             sustraendo=int(input("Introduzca el sustraendo: "))
             print("La resta de {0} - {1} = {2}.".format(minuendo,sustraendo,resta(minuendo,sustraendo)))
-       # --> Completa el código fuente del programa <-- 
+        elif opcion ==3 : 
+            numero=int(input("Introduza un numero:  "))
+            multiplo=int(input("Introduza el multiplo:  "))
+            print("La multp. de {0} * {1}= {2}.".format(numero,multiplo,multiplica(numero,multiplo)))
+        elif opcion ==4 : 
+            dividendo=int(input("Introduza  el dividendo:  "))
+            divisor=int(input("Introduza el divisor:  "))
+            print("La division  de {0}/{1} ={2}.".format(dividendo,divisor,divide(dividendo,divisor)))
         elif opcion !=0 :
             print("Error: Opción incorrecta, introduzca una nueva opción.")
 
