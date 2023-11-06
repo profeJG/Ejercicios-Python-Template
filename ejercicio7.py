@@ -13,7 +13,7 @@ def fibonacci(n):
         vector.append(1)
         return vector
     elif n >= 2:
-        # Implémente la suite de Fibonacci
+      
         vector.append(1)
         vector.append(1)
 
