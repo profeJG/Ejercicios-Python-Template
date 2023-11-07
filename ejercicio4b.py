@@ -43,18 +43,16 @@ def main():
     empates=0
 
     while numeroTirada > 0 :
-        print("Tirada nº ",numeroTirada,":")
+        print("Tirada nº ",str(numeroTirada),":")
         j1 = random.choice(["piedra", "papel", "tijera"])
-        j2 = random.choice(["piedra", "papel", "tijera"])
+        j2 =  random.choice(["piedra", "papel", "tijera"])
         
-        # print(nombre1+" ha sacado "+j1+".")
-        # print(nombre2+" ha sacado "+j2+".")
-        # Implemente los comentarios anteriores empleando print("".format())
-       
-        
-        ganador=quienGana(j1,j2)
-        
-        if ganador == 0 :
+        print("{} ha sacado {}.".format(nombre1, j1))
+        print("{} ha sacado {}.".format(nombre2, j2))
+
+        ganador=quienGana(j1,j2) 
+            
+        if ganador == 0:
             empates=empates+1
             print("Han empatado.")
         elif ganador == 1 :
@@ -65,18 +63,19 @@ def main():
             print("Gana {0} la tirada {1}. Número de tiradas ganadas --> {2}".format(nombre2,numeroTirada,ganadas2))
         else :
             print("Error.")
-        
+            
         numeroTirada=numeroTirada-1
 
-    
-    print("RESUMEN:\n\t{0} --> {1}.\n\t{2} --> {3}.\n\tEmpates: {4}".format(nombre1,ganadas1,nombre2,ganadas2,empates))
-    # Resultado final de todas las tiradas
-    if ganadas1 == ganadas2 :
-        print("HAN EMPATADO")
-    elif ganadas1 > ganadas2 :
-        print("GANA ",nombre1," (",ganadas1,")")
-    else :
-        print("GANA ",nombre2," (",ganadas2,")")
+
+        
+        print("RESUMEN:\n\t{0} --> {1}.\n\t{2} --> {3}.\n\tEmpates: {4}".format(nombre1,ganadas1,nombre2,ganadas2,empates))
+        # Resultado final de todas las tiradas
+        if ganadas1 == ganadas2 :
+            print("HAN EMPATADO")
+        elif ganadas1 > ganadas2 :
+            print("GANA ",nombre1," (",ganadas1,")")
+        else :
+            print("GANA ",nombre2," (",ganadas2,")")
 
 
 if __name__== "__main__" :

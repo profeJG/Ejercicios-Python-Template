@@ -15,6 +15,20 @@ __Author__="José Gaspar Sánchez García"
 def obtenerCalificaion(nota) :
     calificacion="Incorrecta"
    # Implemente aquí ... Si (condición) entonces ... sino ... si (condición) entonces ... sino ...
+   
+    if(nota>=0 and nota<3):
+        return "Muy deficiente"
+    elif(nota>=3 and nota<5):
+        return"Insuficiente"
+    elif(nota>=5 and nota<6):
+        return"Suficiente"
+    elif(nota>=6 and nota<7):
+        return"Bien"
+    elif(nota>=7 and nota<9):
+        return"Notable"
+    elif(nota>=9 and nota<=10):
+        return"Sobresaliente"
+        
     return calificacion
 
 # Programa principal

@@ -13,14 +13,15 @@ def fibonacci(n) :
         vector.append(1)
         return vector
     elif n >=2 :
-        # Implementa las series de Fibonacci
-        # vector[0]=1
-        # vector[1]=1
 
         vector.append(1)
         vector.append(1)
         # Creamos aquí el bucle WHILE
-        # --> Implemente el código del Bucle
+        i = 2
+        while i < n:
+            vector.append(vector[i - 1] + vector[i - 2])
+            i += 1
+
     elif n==1 :
         vector[0]=1
 
